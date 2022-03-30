@@ -1,6 +1,8 @@
 # ZotHome
 A easy to access website for UCI students, where all campus resources are pooled together. 
-*Work in Process!*
+*Work in Progress!*
+
+Please read the Terms and Conditions before submitting any usernames and Passwords
 
 Basic Functions are run via Flask on Python v3.9.7 and several HTML files with CSS styling. 
 As a result, HTML files have to be put in a seperate folder called templates. 
@@ -8,7 +10,7 @@ As a result, HTML files have to be put in a seperate folder called templates.
 There are still a lot features to be added 
  HTML Templeates have not been included yet. 
  
- # Update: 03/29/2022:
+ # Update as of 03/29/2022:
  
  
  The basic HTML files of ZotHome were completely redone in order to make the User Interface much for friendlier and welcoming. A new SignIn and Create an Account Methods were created to enable UX personailzation. Plenty of new features were added too. From enabling web scrapping from important UCI websites and publishing them on the website and making sure the whole experience is more cohesive. 
