@@ -18,7 +18,7 @@ There are still a lot features to be added
  I also need to add that the w3Schools Web Templates proved to very helpful in designing this project, so Thank you!
  
  
- # Future Update Plans:
+ **Future Update Plans:**
  
  As this was a experience gaining project, with no real intention of making an actual product out of, I think that this website has given me enough experience in UI Design and Web Backend Development. Therefore, I do not think, I will devote more time to this project, as I move onto more viable projects. However, if I do come back to this, I plan to add the following features:
  
