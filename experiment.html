@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+
+            h1 {text-align: center;font-family: Verdana;}
+            /* Add a black background color to the top navigation */
+            .topnav {
+            background-color: rgb(17, 17, 19);
+            overflow: hidden;
+            }
+
+            /* Style the links inside the navigation bar */
+            .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            font-family: Verdana;
+            }
+
+            /* Change the color of links on hover */
+            .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+            }
+
+            /* Add a color to the active/current link */
+            .topnav a.active {
+            background-color: gol;
+            color: white;
+            }
+
+            .header {
+        padding: 60px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+        font-size: 30px;
+}
+        .header4{
+            padding: 60px;
+            text-align: center;
+            background: rebeccapurple;
+            color: white;
+            font-size: 30px;
+            
+        }
+        .header21{
+            padding: 60px;
+            text-align: center;
+            background: rgb(4, 229, 245);
+            color: white;
+            font-size: 30px;
+            
+        }
+        .btn{
+	    background: #eb94d0;
+        font-family:Verdana;
+        text-align: center;
+        padding: 30px;
+        font-size: 10px;
+        }
+        
+        
+.ticker-wrapper-h{
+	display: flex;	
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #1c6547;
+}
+
+.ticker-wrapper-h .heading{
+	background-color: #1c6547;
+	color: #fff;
+	padding: 5px 10px;
+	flex: 0 0 auto;
+	z-index: 1000;
+}
+.ticker-wrapper-h .heading:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	border-left: 20px solid #1c6547;
+	border-top: 17px solid transparent;
+	border-bottom: 15px solid transparent;
+}
+
+
+.news-ticker-h{
+	display: flex;
+	margin:0;
+	padding: 0;
+	padding-left: 90%;
+	z-index: 999;
+	
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-name: tic-h;
+	animation-duration: 30s;
+	
+}
+.news-ticker-h:hover { 
+	animation-play-state: paused; 
+}
+
+.news-ticker-h li{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	white-space: nowrap;
+	padding-left: 20px;
+}
+
+.news-ticker-h li a{
+	color: #212529;
+	font-weight: bold;
+}
+
+@keyframes tic-h {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		visibility: visible;
+	}
+	100% {
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+#bannerimage {
+  width: 100%;
+  background-image: url(http://s30.postimg.org/x0ne0p5wx/bootsrap.png);
+  height: 405px;
+  background-color: turquoise;
+  background-position: center;
+}
+
+
+        </style>
+        <title>ZotHome</title>
+        <div class="topnav">
+            <a class="active" href="http://127.0.0.1:5000/">Home</a>
+            <a href="http://127.0.0.1:5000/SignIn">Sign In</a>
+            <a href="http://127.0.0.1:5000/aboutus">About</a>
+            <p style="text-align: center; font-family: Verdana; color: white; font-weight: bold;">ZotHome    </p>
+        </div>
+        <div class="ticker-wrapper-h">
+            <div class="heading">ZotNews</div>
+            
+            <ul class="news-ticker-h">
+                <li>Manush Murali has been appointed News Director at Anteater Television. </li>
+                <li> Nandini Sharma has been appointed Freshman Senator.</li>
+                <li><a  id="news-link">AD: CircleEDU has just reached a million Users. Click here to Sign Up!</a></li>
+            </ul>
+            <!-- href="https://google.com" -->
+        </div>
+    </head>
+    <script>
+        var element = document.getElementById("news-link");
+        element.addEventListener("click",function(){
+            window.location.href = "https://google.com"
+        });
+        
+    </script>
+    <body>
+        <div class="header">
+            <h1>ZotHome</h1>
+            <p>Your one stop shop for everything UCI</p>
+            <p style="font-family: Verdana; color: #fff; font-size: 20px;">The weather at UCI is: {{ weather }}</p></li> 
+          </div>
+        <div class="header4">
+            <a id = "newspaper-link" style="text-decoration: underline;" >Recent Articles at New University</a>
+            <title>{% block title %}{% endblock %}</title> 
+            <ul> 
+            {% for news in newslist %} 
+              <li><p1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-decoration-color: #fff;">{{ news }}</p1></li> 
+            {% endfor %} 
+            </ul> 
+            <h1></h1>
+
+
+            
+        </div>
+        <script>
+            var element = document.getElementById("newspaper-link");
+            element.addEventListener("click",function(){
+                window.location.href = "https://www.newuniversity.org"
+            });
+            
+        </script>
+        <div id = "bannerimage">
+            <a class="twitter-timeline" data-width="49.5%" data-height="500" data-theme="dark" href="https://twitter.com/UCIrvine?ref_src=twsrc%5Etfw">Tweets by UCIrvine</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><iframe width="50%" height="500" src="https://www.youtube.com/embed/jnBjVPAf1_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+
+    </body>
